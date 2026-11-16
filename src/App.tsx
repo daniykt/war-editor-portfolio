@@ -1,10 +1,13 @@
+import { MotionConfig } from 'motion/react'                    
 import { Hero } from '@/components/hero/Hero'
 
 function App() {
   return (
-    <main>
-      <Hero />
-    </main>
+    <MotionConfig reducedMotion="user">                         
+      <main>
+        <Hero />
+      </main>
+    </MotionConfig>                                             
   )
 }
 

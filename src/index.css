@@ -102,6 +102,9 @@
   html {
     @apply font-sans;
     }
+    :focus-visible {                                     
+    @apply outline-2 outline-offset-4 outline-ring;    
+    } 
 }
 
 /* Typographies do Custom Editing Kit: espelham o Styleguide do Penpot */

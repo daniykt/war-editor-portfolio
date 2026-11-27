@@ -81,7 +81,8 @@ Baseado no Custom Editing Kit do War (cores 60/30/10). Os tokens ficam em `src/i
 | Faixa | Largura | O que muda |
 |---|---|---|
 | base (mobile) | < 768px | Layout empilhado (texto acima do vídeo). Nav principal vira barra fixa no rodapé, com "Let's talk" em destaque. Display em 48px. CTA do Hero oculto (a barra já tem o CTA). |
-| `md` (tablet) | 768px a 1279px | Nav volta ao topo, em linha. Display em 72px. CTA do Hero visível. Ainda em uma coluna, com mais respiro lateral. |
+| `md` (tablet) | 768px a 1023px | Uma coluna, com mais respiro lateral. Display em 72px. Barra fixa no rodapé centralizada, com 480px. CTA do Hero oculto. |
+| `lg` (laptop) | 1024px a 1279px | Nav volta ao topo, em linha. CTA do Hero visível. Ainda em uma coluna. |
 | `xl` (desktop) | ≥ 1280px | Duas colunas: texto à esquerda, vídeo à direita (largura fixa), alinhados ao centro. |
 
 ### Motion

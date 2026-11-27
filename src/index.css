@@ -102,7 +102,7 @@
   html {
     @apply font-sans;
     }
-    @media (width < 768px) {
+    @media (width < 1024px) {
     html {
       scroll-padding-bottom: calc(6.75rem + env(safe-area-inset-bottom));
       }

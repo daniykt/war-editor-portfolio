@@ -27,7 +27,7 @@ export function Nav() {
               <a
                 href={link.href}
                 className={cn(
-                  'flex h-12 min-w-14 items-center justify-center text-label md:h-11 md:min-w-0',
+                  'flex h-12 min-w-14 items-center justify-center text-label md:h-11 md:min-w-11',
                   link.mobileLabel ? 'bg-accent text-bg md:bg-transparent md:text-primary' : 'text-primary',
                 )}
               >
@@ -45,9 +45,9 @@ export function Nav() {
         </ul>
 
         <div className="flex items-center gap-1 text-label text-primary">
-          <button type="button" className="h-11">PT</button>
+          <button type="button" className="h-11 min-w-11">PT</button>
           <span aria-hidden="true">|</span>
-          <button type="button" className="h-11">EN</button>
+          <button type="button" className="h-11 min-w-11">EN</button>
         </div>
       </nav>
     </header>

@@ -1,4 +1,4 @@
-import logo from '@/assets/logo.png'
+import logo from '@/assets/logo.svg'
 
 type NavLink = {
   label: string
@@ -15,7 +15,7 @@ export function Nav() {
   return (
     <header className="flex h-24 items-center justify-between">
       <a href="#top" aria-label="War Editor — início">
-        <img src={logo} alt="War Editor" className="h-8 w-auto" />
+        <img src={logo} alt="War Editor" width={57} height={60} className="h-15 w-auto" />
       </a>
 
       <nav aria-label="Principal" className="flex items-center gap-8">

@@ -13,6 +13,12 @@
     "hook": "Your message deserves an edit people actually watch",
     "hookHighlight": "watch",
     "support": "Video editing built around story, pacing and retention. From the first cut to the final delivery, with an editor's eye.",
-    "cta": "Let's talk"
+    "cta": "Let's talk",
+    "videoOpen": "Watch the showreel",
+    "videoTitle": "Showreel",
+    "videoMeta": "War Editor · Showreel"
+  },
+  "modal": {
+    "close": "Close"
   }
 }

@@ -13,6 +13,12 @@
     "hook": "Sua mensagem merece uma edição que as pessoas realmente assistem",
     "hookHighlight": "assistem",
     "support": "Edição de vídeo pensada em história, ritmo e retenção. Do primeiro corte à entrega final, com olhar de editor.",
-    "cta": "Vamos conversar"
+    "cta": "Vamos conversar",
+    "videoOpen": "Assistir ao showreel",
+    "videoTitle": "Showreel",
+    "videoMeta": "War Editor · Showreel"
+  },
+  "modal": {
+    "close": "Fechar"
   }
 }

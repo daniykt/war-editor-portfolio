@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "War Editor — home",
+    "logoAlt": "War Editor",
+    "main": "Main",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "letsTalk": "Let's talk",
+    "language": "Language"
+  },
+  "hero": {
+    "hook": "Your message deserves an edit people actually watch",
+    "hookHighlight": "watch",
+    "support": "Video editing built around story, pacing and retention. From the first cut to the final delivery, with an editor's eye.",
+    "cta": "Let's talk"
+  }
+}

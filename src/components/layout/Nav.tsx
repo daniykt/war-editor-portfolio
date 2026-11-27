@@ -21,20 +21,20 @@ export function Nav() {
       </a>
 
       <nav aria-label="Principal" className="flex items-center gap-8">
-        <ul className="fixed inset-x-4 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-10 flex items-center gap-2 border-2 border-primary bg-bg p-2 md:static md:gap-8 md:border-0 md:p-0">
+        <ul className="fixed inset-x-4 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-10 mx-auto flex max-w-120 items-center gap-2 border-2 border-primary bg-bg p-2 lg:static lg:mx-0 lg:max-w-none lg:gap-8 lg:border-0 lg:p-0">
           {links.map((link) => (
-            <li key={link.href} className={cn(link.mobileLabel && 'flex-1 md:flex-none')}>
+            <li key={link.href} className={cn(link.mobileLabel && 'flex-1 lg:flex-none')}>
               <a
                 href={link.href}
                 className={cn(
-                  'flex h-12 min-w-14 items-center justify-center text-label md:h-11 md:min-w-11',
-                  link.mobileLabel ? 'bg-accent text-bg md:bg-transparent md:text-primary' : 'text-primary',
+                  'flex h-12 min-w-14 items-center justify-center text-label lg:h-11 lg:min-w-11',
+                  link.mobileLabel ? 'bg-accent text-bg lg:bg-transparent lg:text-primary' : 'text-primary',
                 )}
               >
                 {link.mobileLabel ? (
                   <>
-                    <span className="md:hidden">{link.mobileLabel}</span>
-                    <span className="hidden md:inline">{link.label}</span>
+                    <span className="lg:hidden">{link.mobileLabel}</span>
+                    <span className="hidden lg:inline">{link.label}</span>
                   </>
                 ) : (
                   link.label

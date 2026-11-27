@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion, type Variants } from 'motion/react'
+import { m, type Variants } from 'motion/react'
 import { Nav } from '@/components/layout/Nav'
 import { HeroHook } from '@/components/hero/HeroHook'
 import { useFontReady } from '@/hooks/useFontReady'
@@ -30,16 +30,16 @@ export function Hero() {
         <div className={cn('flex w-full min-w-0 flex-col xl:w-160 items-start', !fontReady && 'invisible')}>
           <HeroHook play={fontReady} onComplete={() => setHookDone(true)} />
 
-          <motion.p
+          <m.p
             className="mt-6 max-w-140 text-body xl:mt-8 xl:max-w-135 text-text"
             initial={{ opacity: 0 }}
             animate={{ opacity: fontReady ? 1 : 0 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
           >
             {t('hero.support')}
-          </motion.p>
+          </m.p>
 
-          <motion.a
+          <m.a
             href="#contact"
             className="mt-8 hidden h-14 items-center lg:inline-flex xl:mt-12 px-16 bg-accent text-label text-bg"
             variants={cta}
@@ -47,7 +47,7 @@ export function Hero() {
             animate={hookDone ? 'visible' : 'hidden'}
           >
             {t('hero.cta')}
-          </motion.a>
+          </m.a>
         </div>
 
         {/* Vídeo: passo 4 */}

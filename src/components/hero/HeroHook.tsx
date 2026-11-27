@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion, steps, type Variants } from 'motion/react'
+import { m, steps, type Variants } from 'motion/react'
 import { useTranslation } from '@/i18n/useTranslation'
 
 // 'start': o Motion limita 'end' a 99,9% do progresso, então steps(4) parava em 75% do caminho
@@ -50,7 +50,7 @@ export function HeroHook({ play, onComplete }: HeroHookProps) {
   const highlightWord = t('hero.hookHighlight')
 
   return (
-    <motion.h1
+    <m.h1
       key={language}
       aria-label={hook}
       className="text-display text-primary"
@@ -66,15 +66,15 @@ export function HeroHook({ play, onComplete }: HeroHookProps) {
       }}
     >
       {words.map((w, i) => (
-        <motion.span
+        <m.span
           key={i}
           aria-hidden="true"
           variants={w === highlightWord ? highlight : word}
           className="mr-[0.25em] inline-block"
         >
           {w}
-        </motion.span>
+        </m.span>
       ))}
-    </motion.h1>
+    </m.h1>
   )
 }

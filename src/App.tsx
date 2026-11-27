@@ -1,12 +1,14 @@
-import { MotionConfig } from 'motion/react'                    
+import { LazyMotion, MotionConfig, domAnimation } from 'motion/react'                    
 import { Hero } from '@/components/hero/Hero'
 
 function App() {
   return (
     <MotionConfig reducedMotion="user">                         
-      <main>
-        <Hero />
-      </main>
+      <LazyMotion features={domAnimation} strict>
+        <main>
+          <Hero />
+        </main>
+      </LazyMotion>
     </MotionConfig>                                             
   )
 }

@@ -76,6 +76,14 @@ Baseado no Custom Editing Kit do War (cores 60/30/10). Os tokens ficam em `src/i
 | `text-caption` | Raleway | 14px / 600 |
 | `text-label` | Raleway, caixa alta | 12px / 700 |
 
+### Breakpoints
+
+| Faixa | Largura | O que muda |
+|---|---|---|
+| base (mobile) | < 768px | Layout empilhado (texto acima do vídeo). Nav principal vira barra fixa no rodapé, com "Let's talk" em destaque. Display em 48px. CTA do Hero oculto (a barra já tem o CTA). |
+| `md` (tablet) | 768px a 1279px | Nav volta ao topo, em linha. Display em 72px. CTA do Hero visível. Ainda em uma coluna, com mais respiro lateral. |
+| `xl` (desktop) | ≥ 1280px | Duas colunas: texto à esquerda, vídeo à direita (largura fixa), alinhados ao centro. |
+
 ### Motion
 
 Sensação stop-motion e controlada, sem bounce.

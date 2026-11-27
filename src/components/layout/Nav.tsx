@@ -1,14 +1,16 @@
 import logo from '@/assets/logo.svg'
+import { cn } from '@/lib/utils'
 
 type NavLink = {
   label: string
+  mobileLabel?: string
   href: string
 }
 
 const links: NavLink[] = [
   { label: 'Work', href: '#work' },
   { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', mobileLabel: "Let's talk", href: '#contact' },
 ]
 
 export function Nav() {
@@ -19,20 +21,33 @@ export function Nav() {
       </a>
 
       <nav aria-label="Principal" className="flex items-center gap-8">
-        <ul className="flex items-center gap-8">
+        <ul className="fixed inset-x-4 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-10 flex items-center gap-2 border-2 border-primary bg-bg p-2 md:static md:gap-8 md:border-0 md:p-0">
           {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} className="text-label text-primary">
-                {link.label}
+            <li key={link.href} className={cn(link.mobileLabel && 'flex-1 md:flex-none')}>
+              <a
+                href={link.href}
+                className={cn(
+                  'flex h-12 min-w-14 items-center justify-center text-label md:h-11 md:min-w-0',
+                  link.mobileLabel ? 'bg-accent text-bg md:bg-transparent md:text-primary' : 'text-primary',
+                )}
+              >
+                {link.mobileLabel ? (
+                  <>
+                    <span className="md:hidden">{link.mobileLabel}</span>
+                    <span className="hidden md:inline">{link.label}</span>
+                  </>
+                ) : (
+                  link.label
+                )}
               </a>
             </li>
           ))}
         </ul>
 
-        <div className="text-label text-primary">
-          <button type="button">PT</button>
-          <span aria-hidden="true"> | </span>
-          <button type="button">EN</button>
+        <div className="flex items-center gap-1 text-label text-primary">
+          <button type="button" className="h-11">PT</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" className="h-11">EN</button>
         </div>
       </nav>
     </header>

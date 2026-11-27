@@ -102,6 +102,11 @@
   html {
     @apply font-sans;
     }
+    @media (width < 768px) {
+    html {
+      scroll-padding-bottom: calc(6.75rem + env(safe-area-inset-bottom));
+      }
+    }
     :focus-visible {                                     
     @apply outline-2 outline-offset-4 outline-ring;    
     } 
@@ -110,7 +115,10 @@
 /* Typographies do Custom Editing Kit: espelham o Styleguide do Penpot */
 @utility text-display {
     font-family: var(--font-display);
-    font-size: 4.5rem;        /* 72px */
+    font-size: 3rem;          /* 48px no mobile */
+    @variant md {
+        font-size: 4.5rem;    /* 72px a partir de md */
+    }
     font-weight: 400;
     line-height: 1;
     letter-spacing: 0;

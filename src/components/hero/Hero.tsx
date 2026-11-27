@@ -5,6 +5,9 @@ import { HeroHook } from '@/components/hero/HeroHook'
 import { useFontReady } from '@/hooks/useFontReady'
 import { cn } from '@/lib/utils'
 import { useTranslation } from '@/i18n/useTranslation'
+import { VideoModal } from '@/components/video/VideoModal'
+
+const SHOWREEL_ID = 'tfsiIacPvfI'
 
 // Entrada do CTA: quick ease-out, suave (sem steps). Com reduced motion, o y é ignorado.
 const cta: Variants = {
@@ -48,11 +51,22 @@ export function Hero() {
         </div>
 
         {/* Vídeo: passo 4 */}
-        <div className="flex aspect-video w-full min-w-0 items-center xl:w-140 justify-center border border-primary bg-bg">
-          <svg viewBox="0 0 24 24" aria-hidden="true" className="size-16 fill-accent">
-            <polygon points="6,3 21,12 6,21" />
-          </svg>
-        </div>
+        <VideoModal
+          videoId={SHOWREEL_ID}
+          title={t('hero.videoTitle')}
+          meta={t('hero.videoMeta')}
+          trigger={
+            <button
+              type="button"
+              aria-label={t('hero.videoOpen')}
+              className="flex aspect-video w-full min-w-0 cursor-pointer items-center xl:w-140 justify-center border border-primary bg-bg"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="size-16 fill-accent">
+                <polygon points="6,3 21,12 6,21" />
+              </svg>
+            </button>
+          }
+        />
       </div>
     </section>
   )

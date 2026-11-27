@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "War Editor — início",
+    "logoAlt": "War Editor",
+    "main": "Principal",
+    "work": "Trabalhos",
+    "about": "Sobre",
+    "contact": "Contato",
+    "letsTalk": "Vamos conversar",
+    "language": "Idioma"
+  },
+  "hero": {
+    "hook": "Sua mensagem merece uma edição que as pessoas realmente assistem",
+    "hookHighlight": "assistem",
+    "support": "Edição de vídeo pensada em história, ritmo e retenção. Do primeiro corte à entrega final, com olhar de editor.",
+    "cta": "Vamos conversar"
+  }
+}

@@ -4,6 +4,7 @@ import { Nav } from '@/components/layout/Nav'
 import { HeroHook } from '@/components/hero/HeroHook'
 import { useFontReady } from '@/hooks/useFontReady'
 import { cn } from '@/lib/utils'
+import { useTranslation } from '@/i18n/useTranslation'
 
 // Entrada do CTA: quick ease-out, suave (sem steps). Com reduced motion, o y é ignorado.
 const cta: Variants = {
@@ -14,6 +15,7 @@ const cta: Variants = {
 export function Hero() {
   const fontReady = useFontReady('400 72px "Jersey 25"')
   const [hookDone, setHookDone] = useState(false)
+  const { t } = useTranslation()
 
   return (
     <section className="mx-auto flex min-h-svh w-full max-w-360 flex-col px-6 pb-[calc(6.75rem+env(safe-area-inset-bottom))] md:px-10 lg:pb-10 xl:px-20">
@@ -31,8 +33,7 @@ export function Hero() {
             animate={{ opacity: fontReady ? 1 : 0 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
           >
-            Video editing built around story, pacing and retention. From the first cut
-            to the final delivery, with an editor's eye.
+            {t('hero.support')}
           </motion.p>
 
           <motion.a
@@ -42,7 +43,7 @@ export function Hero() {
             initial="hidden"
             animate={hookDone ? 'visible' : 'hidden'}
           >
-            Let's talk
+            {t('hero.cta')}
           </motion.a>
         </div>
 

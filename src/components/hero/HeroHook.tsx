@@ -1,8 +1,7 @@
+import { useState } from 'react'
 import { motion, steps, type Variants } from 'motion/react'
+import { useTranslation } from '@/i18n/useTranslation'
 
-const hook = 'Your message deserves an edit people actually watch'
-const words = hook.split(' ')
-const highlightWord = 'watch'
 // 'start': o Motion limita 'end' a 99,9% do progresso, então steps(4) parava em 75% do caminho
 const fourSteps = steps(4, 'start')
 // Mas 'start' já vale 0.25 no progresso 0, e o WAAPI (fill "both") mostra esse valor
@@ -43,16 +42,27 @@ type HeroHookProps = {
 }
 
 export function HeroHook({ play, onComplete }: HeroHookProps) {
+  const { t, language } = useTranslation()
+  const [played, setPlayed] = useState(false)
+
+  const hook = t('hero.hook')
+  const words = hook.split(' ')
+  const highlightWord = t('hero.hookHighlight')
+
   return (
     <motion.h1
+      key={language}
       aria-label={hook}
       className="text-display text-primary"
       variants={container}
-      initial="hidden"
+      initial={played ? false : 'hidden'}
       animate={play ? 'visible' : 'hidden'}
       onAnimationComplete={(definition) => {
         // Dispara para qualquer variant; só interessa o fim da entrada
-        if (definition === 'visible') onComplete?.()
+        if (definition === 'visible') {
+          setPlayed(true)
+          onComplete?.()
+        }
       }}
     >
       {words.map((w, i) => (

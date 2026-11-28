@@ -98,3 +98,9 @@ Sensação stop-motion e controlada, sem bounce.
 ## Design
 
 Protótipo no Penpot: link em breve.
+
+## Fim de linha
+
+O projeto usa LF em todos os arquivos de texto, definido no `.gitattributes` e no
+`.editorconfig`. O editor precisa respeitar o EditorConfig. No Windows, a configuração
+`core.autocrlf` não precisa ser alterada: o `.gitattributes` tem prioridade.

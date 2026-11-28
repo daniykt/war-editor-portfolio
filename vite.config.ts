@@ -1,5 +1,6 @@
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import { cn } from 'cn/vite'
 import path from 'node:path'
 import type { Plugin } from 'vite'
 import { defineConfig } from 'vitest/config'
@@ -32,7 +33,12 @@ function preloadJersey25(): Plugin {
 }
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(), preloadJersey25()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    cn({ config: 'cn.config.mjs', out: 'src/lib/cn-tables.ts', content: ['src/**/*.{ts,tsx}', 'index.html'] }),
+    preloadJersey25(),
+  ],
   resolve: {
     alias: {
       '@': path.resolve(import.meta.dirname, './src'),

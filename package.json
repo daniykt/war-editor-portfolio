@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "cn:build": "cn build --config cn.config.mjs --out src/lib/cn-tables.ts --content \"src/**/*.{ts,tsx}\" --content index.html"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

@@ -20,5 +20,15 @@
   },
   "modal": {
     "close": "Close"
+  },
+  "videos": {
+    "th1": { "title": "Talking-head 01" },
+    "th2": { "title": "Talking-head 02" },
+    "th3": { "title": "Talking-head 03" },
+    "th4": { "title": "Talking-head 04" },
+    "th5": { "title": "Reel 01" },
+    "th6": { "title": "Reel 02" },
+    "mo1": { "title": "Motion 01" },
+    "mo2": { "title": "Motion 02" }
   }
 }

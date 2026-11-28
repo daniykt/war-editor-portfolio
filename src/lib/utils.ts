@@ -1,10 +1,5 @@
-import { createCn } from 'cn/config'
+import { createCn } from 'cn/engine'
+import tables from './cn-tables'
 
-// Ensina o cn que as typographies do Custom Editing Kit são tamanho de texto, não cor
-export const cn = createCn({
-  extend: {
-    classGroups: {
-      'font-size': [{ text: ['display', 'headline', 'body', 'caption', 'label'] }],
-    },
-  },
-})
+// Tabelas geradas no build pelo plugin cn/vite a partir de cn.config.mjs (issue #31).
+export const cn = createCn(tables)
